@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Josh Comeau's Custom CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* CSS variables */
+:root {
+  --turquoise: #66e2dc;
+  --dark-orange: #fa7453;
+  --orange: #ffb964;
+  --white: #fcfaf9;
+  --black: #191826;
+
+  --ff-body: 'IBM Plex Sans', sans-serif;
+  --ff-heading: 'IBM Plex Sans', sans-serif;
+  --fluid-text-h1: clamp(2.5rem, 1.1994rem + 5.5491vi, 5.5rem);
+  --fluid-text-h2: clamp(2rem, 1.7832rem + 0.9249vi, 2.5rem);
+  --fluid-text-p: clamp(1rem, 0.9458rem + 0.2312vi, 1.125rem);
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+/* reusbale styles */
+.container {
+  max-width: 70rem;
+  padding-inline: 1rem;
+  margin: 0 auto;
+}
+
+.primary-heading {
+  font-size: var(--fluid-text-h1);
+  line-height: 88px;
+  letter-spacing: -1px;
+}
+
+/* page styles */
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fluid-text-p);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  background: url(/assets/bg-main-desktop.png);
+}
+
+/* header */
+header {
+  position: absolute;
+  width: 100%;
+  top: 3.9375rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* hero */
+.hero__title {
+  padding-top: clamp(8.5rem, 6.6304rem + 9.3478vi, 13.875rem);
+}
