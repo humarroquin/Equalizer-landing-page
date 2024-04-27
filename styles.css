@@ -78,11 +78,17 @@ body {
   font-size: var(--fluid-text-p);
   font-weight: var(--fw-regular);
   line-height: 1.5;
+
+  background: url(/assets/bg-pattern-1.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 22%;
   -webkit-font-smoothing: antialiased;
 }
 
 main {
   background: url(/assets/bg-main-desktop.png);
+  background-repeat: no-repeat;
 }
 
 /* header */
@@ -94,7 +100,20 @@ header {
   transform: translateX(-50%);
 }
 
+@media (max-width: 24em) {
+  header {
+    top: 2.5rem;
+  }
+}
+
 /* hero */
 .hero__title {
   padding-top: clamp(8.5rem, 6.6304rem + 9.3478vi, 13.875rem);
+  padding-bottom: clamp(1rem, 0.4783rem + 2.6087vi, 2.5rem);
+  max-width: 80%;
+}
+
+.hero__description {
+  max-width: 70%;
+  padding-bottom: clamp(10.375rem, 7.1359rem + 16.1957vi, 19.6875rem);
 }
