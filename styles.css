@@ -62,7 +62,7 @@ h6 {
 /* reusbale styles */
 .container {
   max-width: 70rem;
-  padding-inline: 1rem;
+  padding-inline: 2rem;
   margin: 0 auto;
 }
 
@@ -144,7 +144,6 @@ body::after {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
 }
 
 /* header */
@@ -168,6 +167,8 @@ header {
 .blue-bg {
   width: 100%;
   height: 37.5rem;
+  background: url(/assets/bg-pattern-2.svg) no-repeat;
+  background-position: left 20rem top 0;
   background-color: var(--black);
   border-radius: 12px;
 
@@ -185,13 +186,13 @@ header {
 .pricing {
   background: var(--dark-orange);
   color: var(--white);
-  padding: 3.625rem 3.6875rem 2.6875rem;
+  padding: 3.625rem 3.4375rem 3rem;
   border-radius: 12px;
-  max-width: clamp(24.9375rem, 23.664rem + 5.4335vi, 27.875rem);
+  max-width: clamp(24.9375rem, 20.1578rem + 9.9576vi, 27.875rem);
 
   position: absolute;
   top: clamp(5.625rem, 11.0007rem + -6.9364vi, 9.375rem);
-  right: 5.9375rem;
+  right: clamp(3.625rem, -0.1377rem + 7.839vi, 5.9375rem);
 }
 
 .pricing__title {
@@ -224,9 +225,9 @@ header {
 footer {
   display: grid;
   grid-template-columns: 0.5fr 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
 
-  padding-top: clamp(4rem, 0.2608rem + 15.9538vi, 12.625rem);
+  padding-top: clamp(12.625rem, 16.6685rem + -5.2174vi, 15.625rem);
   padding-bottom: clamp(5rem, 4.702rem + 1.2717vi, 5.6875rem);
 }
 
@@ -261,9 +262,47 @@ footer {
     line-height: 64px;
     letter-spacing: -0.73px;
   }
+  .pricing {
+    padding: 3rem 3.4375rem 3rem;
+  }
+  .blue-bg {
+    background-position: left 70% top -40%;
+  }
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__logo {
+    grid-column: span 2;
+  }
 }
 
-@media (max-width: 24em) {
+@media (max-width: 35em) {
+  .blue-bg {
+    background-position: left 50% top 0;
+    background-size: 80%;
+  }
+  .phone-img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pricing {
+    max-width: 100%;
+    right: 0;
+    top: 22rem;
+  }
+  footer {
+    padding-top: clamp(25rem, 29.212rem + -5.4348vi, 28.125rem);
+    grid-template-columns: 1fr;
+  }
+  .footer__logo {
+    grid-column: auto;
+  }
+  .social-icons {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 24.75em) {
   body {
     background: none;
   }
